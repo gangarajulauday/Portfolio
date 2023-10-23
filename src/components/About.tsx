@@ -1,6 +1,18 @@
 import styles from "./profile.module.css";
 
 export const About = () => {
+  const skillItems = [
+    { label: "HTML" },
+    { label: "CSS" },
+    { label: "AngularJS" },
+    { label: "ReactJS" },
+    { label: "SAAS" },
+    { label: "JAVA" },
+    { label: "Bootstrap" },
+    { label: "Javascript" },
+    { label: "TestTet" },
+    { label: "Tet" },
+  ];
   return (
     <>
       <div className={styles.description}>
@@ -19,7 +31,28 @@ export const About = () => {
         </div>
       </div>
       <div className={styles.skillsSection}>
-        <div>skills</div>
+        <div className="container">
+          <div className="row g-2">
+            <div className={`col ${styles.skillSetBlock}`}>
+              <h2>Get to Know Me</h2>
+              <div className={styles.skillPills}>I have a Master's degree in Computer Science. Currently working as a FrontEnd Developer. When I'm not working or coding, I explore the world of video games.</div>
+              <div>
+                <button type="button" className="btn btn-primary">
+                  Contact Me
+                </button>
+              </div>
+            </div>
+
+            <div className={`col ${styles.skillSetBlock}`}>
+              <h2>My Skills</h2>
+              <div className={styles.skillPills}>
+                {skillItems.map((obj) => {
+                  return <span className={styles.skillBadge}>{obj.label}</span>;
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

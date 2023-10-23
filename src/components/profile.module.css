@@ -1,5 +1,8 @@
 .section {
     padding: 30px 250px 30px 250px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .title {
   font-family: "eurostile", sans-serif;
@@ -25,7 +28,7 @@
     background-color: white;
     margin: 0px 50px;
     padding: 80px 0px 80px 0px;
-    margin-top: -35px;
+    /* margin-top: -35px; */
     border-radius: 5px;
 }
 
@@ -35,4 +38,23 @@
 
 .avatarSection{
     width: 194px;
+}
+.skillBadge{
+    padding: 10px;
+    background: #8a8abd;
+    border-radius: 5px;
+
+}
+.skillSetBlock{
+    display: flex;
+    flex-direction: column;
+    row-gap: 19px;
+}
+
+.skillPills{
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+
 }
