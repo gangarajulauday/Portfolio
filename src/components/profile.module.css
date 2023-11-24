@@ -19,7 +19,7 @@
 }
 
 .description{
-    background-color: #74c5fa;
+    background-color: #cfeff9;
     padding: 51px 150px 59px 150px;
     
     
@@ -41,8 +41,8 @@
 }
 .skillBadge{
     padding: 10px;
-    background: #8a8abd;
-    border-radius: 5px;
+    background: #cfeff9;
+    border-radius: 22px;
 
 }
 .skillSetBlock{

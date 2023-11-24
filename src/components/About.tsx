@@ -1,20 +1,25 @@
+import { useState } from "react";
 import styles from "./profile.module.css";
+import ContactUsModal from "./contactusModal";
 
 export const About = () => {
+
+  const [showContactModal, setShowContactModal] = useState<boolean>(false)
   const skillItems = [
-    { label: "HTML" },
-    { label: "CSS" },
-    { label: "AngularJS" },
     { label: "ReactJS" },
-    { label: "SAAS" },
-    { label: "JAVA" },
-    { label: "Bootstrap" },
+    { label: "Angular JS" },
     { label: "Javascript" },
-    { label: "TestTet" },
-    { label: "Tet" },
+    { label: "Java" },
+    { label: "Spring Boot" },
+    { label: "Bootstrap" },
+    { label: "HTML5" },
+    { label: "CSS" },
+    { label: "Oracle DB" },
+    { label: "AWS" },
   ];
   return (
     <>
+    <ContactUsModal show={showContactModal} closeCallback={()=>setShowContactModal(false)}/>
       <div className={styles.description}>
         <div>
           I'm a front-end developer with a passion for building web experiences
@@ -37,7 +42,7 @@ export const About = () => {
               <h2>Get to Know Me</h2>
               <div className={styles.skillPills}>I have a Master's degree in Computer Science. Currently working as a FrontEnd Developer. When I'm not working or coding, I explore the world of video games.</div>
               <div>
-                <button type="button" className="btn btn-primary">
+                <button type="button" className="btn btn-primary" onClick={()=>setShowContactModal(true)} >
                   Contact Me
                 </button>
               </div>
